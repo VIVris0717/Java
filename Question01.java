@@ -1,20 +1,31 @@
-Java version 7 has added a new feature to improve the readability of Numeric Literals.
-We can include an underscore ('_') in numeric literals to show grouping of digits.
-For example:
-long mySalary = 900_000L;// Which is equal to 900000 (Nine Hundred Thousand)
-long magicNumberInHex = 0xCAFE_BABE; // Want to know more about Magic Number?
+Write a class SumOfElements with a public method sum that takes one parameter arr of type int[] and returns the sum of all elements in arr. The return type of sum should be long.
 
-Note: Underscore is only for programmer's readability, it is completely ignored during computations.
+Assumptions:
+arr is never null
+return 0 in case arr is empty
+Here is an example:
+Cmd Args : 3 5 3 2 0
+Sum of all elements in the given array is : 13
+Note how the return type of the function is long and not int. The reason for this is to overcome errors due to data overflow while adding multiple int values.
 
-Usage rules for underscore:
-Underscore can only be used between two digits.
-Underscore cannot be used at the beginning or ending of a number.
-Underscore cannot be used before a suffix like F (used in float), L (used in Long) or D (used in Double).
-Underscore cannot be used before or between a radix prefix used for binary or octal or hex numbers
-
-Select all the correct answers given bellow'
-
-
-Answer 
-
-int mySelf = 0___0___7;
+package q11046;
+public class SumOfElements {
+	
+	/**
+	 * Computes the sum of all the elements in the given array
+	 * 
+	 * 
+	 * @return the sum 
+	 */
+	public long sum(int[] arr) {
+		// Write the code
+		if(arr.length==0){
+			return 0;
+		}
+	long sum=0;
+		for(int i=0;i<arr.length;i++){
+			sum+=arr[i];
+		}
+		return sum;
+	}
+}

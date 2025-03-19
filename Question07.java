@@ -1,29 +1,33 @@
-In Java, the primitive char type has a wrapper class called Character, which provide useful methods to work with characters.
+Write a class ElementCheck with a public method elementFinder that takes one parameter arr of type int[] and return true if the first and last elements of the arr are same else return false. The return type of elementFinder should be boolean.
 
-See and type the below code to understand the usage of most commonly used methods in Character class:
-isLetter()
-isDigit()
-isLetterOrDigit()
+Assumptions:
+arr is never null
+Here are examples for your understanding:
+Cmd Args : 33 25 12 5 33
+true
+Cmd Args : 1 2 3 4
+false
 
+package q11055;
 
-Note: Please don't change the package name.
+public class ElementCheck {
+	
+/**
+ * Find first and last elements of the array are same are not
+ * 
+ * @return true if both are same else return false
+ */
+ 
 
-package q10813;
-public class CharacterDemo {
-	public static void main(String[] args) {
-		char ch1 = 'A';
-		char ch2 = '7';
-		char ch3 = '*';
-		char ch4 = '\'';
-		char ch5 = '"';
-		char ch6 = ' ';
-		System.out.println("ch1 is a character: " + Character.isLetter(ch1));
-		System.out.println("ch2 is a character: " + Character.isLetter(ch2));
-		System.out.println("ch2 is a digit: " + Character.isDigit(ch2));
-		System.out.println("ch1 is a letter or digit: " + Character.isLetterOrDigit(ch1));
-		System.out.println("ch3 is a letter or digit: " + Character.isLetterOrDigit(ch3));
-		System.out.println("ch4 contains escape sequence to print single-quote: " + ch4);
-		System.out.println("ch5 contains a double-quote char, which is treated as a normal char : " + ch5);
-		System.out.println("ch6 is a space char: >" + ch6 + "<");
+	public boolean elementFinder(int[] arr) {
+		
+		//Write your code here
+		if(arr[0]==arr[arr.length-1]){
+			return true;
+		}else{
+			return false;
+			
+		}
+		
 	}
 }

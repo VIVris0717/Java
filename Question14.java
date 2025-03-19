@@ -1,27 +1,41 @@
-Read and understand how the below methods work by clicking on each of the links below. Later use them to complete the partial code given below.
-add(BigDecimal augend, MathContext mc)
-subtract(BigDecimal subtrahend, MathContext mc)
-multiply(BigDecimal multiplicand, MathContext mc)
-divide(BigDecimal divisor, MathContext mc)
-Note: Retain the precision as 5. While calculating sum and difference, let it be between x and y. Similarly consider the product of x and y and while calculating the quotient consider x as the dividend and y as the divisor.
+Write a class SequenceCount with a public method sequenceCount that takes one parameter arr of type int[] and returns the sequence count 1,1 in the arr. The return type of sequenceCount should be int.
 
-Note: Please don't change the package name'
+Assumptions:
+arr is never null
+Overlapping of counting is allowed
+Here is an example:
+Enter no of elements in the array:
+7
+Enter elements in the array seperated by space:
+1 -1 1 1 1 2 3 1
+2
 
-package q10862;
-import java.math.BigDecimal;
-import java.math.MathContext;
-public class BigDecimalUsage {
-	public static void main(String[] args) {
-		MathContext mathContext = new MathContext(5);
-		BigDecimal x = new BigDecimal("3.145", mathContext);
-		BigDecimal y = new BigDecimal("1.792", mathContext);
-		BigDecimal sum = x.add(y ,mathContext); //fill
-		BigDecimal difference =x.subtract( y,mathContext ) ; //fill
-		BigDecimal product =x.multiply( y,mathContext) ; //fill
-		BigDecimal quotient = x.divide( y,mathContext); //fill
-		System.out.println("sum = " + sum); 
-		System.out.println("difference = " + difference);
-		System.out.println("product = " + product);
-		System.out.println("quotient = " + quotient);
+package q11062;
+
+public class SequenceCount {
+	/**
+	 * Find the sequence count 1,1 int given array
+	 * 
+	 * 
+	 * @return count
+	 */
+	 
+	public int sequenceCount(int[] a) {
+		
+		//Write your code here
+		int count=0;
+		//if(a.length==1){
+		//	if(a[0]==1){
+		//		count=1;
+		//		return 1;
+		//	}
+	//	}
+		for(int i=0;i<a.length-1;i++){
+			if(a[i]==1 && a[i+1]==1 ){
+				count++;
+			}
+		}
+		return count;
+		
 	}
 }

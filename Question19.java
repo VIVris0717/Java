@@ -1,33 +1,103 @@
-Among the various print methods in Java (about which we will learn later),
-System.out.println and
-System.out.print are the most commonly used ones.
+Write a class CompareArrays with a public method compareArrays that takes two parameters arr1 and arr2 are of type int[] and returns true if arr1 and arr2 are of equal length and also have same elements. else returns false
 
-As the name suggests println method prints the text passed to it and also prints a new line char (\n) at the end.
-However, the print method prints only the text passed, without appending the new line char as in the case of println.
+Here are examples for your understanding:
+Enter no of elements in the arr1:
+3
+Enter elements in the arr1 seperated by space:
+8 9 7
+Enter no of elements in the arr2:
+3
+Enter elements in the arr2 seperated by space:
+8 9 7
+true
+Enter no of elements in the arr1:
+3
+Enter elements in the arr1 seperated by space:
+3 6 7
+Enter no of elements in the arr2:
+4
+Enter elements in the arr2 seperated by space:
+3 6 7 1
+false
+Hint: Iterate through the first array and compare each element with the corresponding element in the second array.
 
-As programmers we mostly use the println method when we want to see the output on separate lines.
+Note: Please don't change the package name.
+Sample Test Cases
+Test Case 1:
+Expected Output:
+Enter·no·of·elements·in·the·arr1:
+3
+Enter·elements·in·the·arr1·seperated·by·space:
+8 9 7
+Enter·no·of·elements·in·the·arr2:
+3
+Enter·elements·in·the·arr2·seperated·by·space:
+8 9 7
+true
 
-However, there may be situations when we want to produce output in chunks and also want all the output to be on the same line. In such situations we have to use print.
+Test Case 2:
+Expected Output:
+Enter·no·of·elements·in·the·arr1:
+3
+Enter·elements·in·the·arr1·seperated·by·space:
+12 54 36
+Enter·no·of·elements·in·the·arr2:
+4
+Enter·elements·in·the·arr2·seperated·by·space:
+54 69 78 52
+false
 
-Click on  to understand the difference between print and println methods.
+Test Case 3:
+Expected Output:
+Enter·no·of·elements·in·the·arr1:
+3
+Enter·elements·in·the·arr1·seperated·by·space:
+3 6 7
+Enter·no·of·elements·in·the·arr2:
+4
+Enter·elements·in·the·arr2·seperated·by·space:
+3 6 7 1
+false
 
-In the code given, use the appropriate print methods such that the below output is produced.
-Ganga Nile
-Amazon
-END
-Note that we are printing a space " " between text1 and text2 so that in the output also there is a space between Ganga and Nile.
+Test Case 4:
+Expected Output:
+Enter·no·of·elements·in·the·arr1:
+0
+Enter·elements·in·the·arr1·seperated·by·space:
+Enter·no·of·elements·in·the·arr2:
+0
+Enter·elements·in·the·arr2·seperated·by·space:
+true
 
-package q10765;
-public class PrintMe {
-	public static void main(String[] args) {
-		String text1 = "Ganga";
-		String text2 = "Nile";
-		String text3 = "Amazon";
-		System.out.print(text1);
-		System.out.print(" ");
-		System.out.println(text2);
-		System.out.println(text3);
-		System.out.println("END");
 
+package q11067;
+
+public class CompareArrays {
+	/** Compare lengths and elements of the arr1 and arr2 are equal or not
+	 * 
+	 * 
+	 * 
+	 * @return result
+	 */ 
+	
+	public boolean compareArrays(int[] arr1, int[] arr2) {
+		
+		//Write your code here
+		boolean ans=(arr1.length==arr2.length)?true:false;
+		int count=0;
+		if(ans==true){
+		for(int i=0;i<arr1.length;i++){
+			if(arr1[i]==arr2[i]){
+				count++;
+		}
+		}
+		}
+		if(ans==false || count<arr1.length){
+			return false;
+		}else{
+			return true;
+		}
+		
+		
 	}
 }

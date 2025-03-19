@@ -1,59 +1,37 @@
-Write the code in the below main() method to calculate and print the Total and Average marks scored by a student from the input given through the command line arguments.
+Write a class SequenceCheck with a public method sequenceCheck that takes one parameter arr of type int[] and returns true if 6, 9, 12 present consecutively in the arr. The return type of sequenceCheck should be boolean.
 
-Assume that four command line arguments name, marks1, marks2, marks3 will be passed to the main() method in the below class with name TotalAndAvgMarks.
+Assumptions:
+arr is never null
+Elements 6, 9, 12 are appear consecutiviely
+Here are examples:
+Cmd Args : 62 32 6 9 12
+true
+Cmd Args : 99 36 6 12 56 9
+false
 
-Sample Input and Output:
-For example, if the command line arguments to the main() method are : Narmada 75.50 67.75 78.25.
-The program should print the result as:
-	Name = Narmada
-	Marks1 = 75.5
-	Marks2 = 67.75
-	Marks3 = 78.25
-	Total Marks = 221.5
-	Average Marks = 73.833336
-Note: Consider the three marks passed in the command line arguments as floats.
+package q11059;
 
-Note: Please don't change the package name
-
-
-
-Answer 
-
-package q10817;
-
-public class TotalAndAvgMarks {
+public class SequenceCheck {
+	/**
+	 * Find the given elements present consecutively in the array or not
+	 * 
+	 * 
+	 * @return result
+	 */ 
 	
-	public static void main(String[] args) {
+	public boolean sequenceCheck(int[] arr) {
+		boolean result=false;
 		
-		String name = args[0];
-		
-		float m1 =Float.parseFloat(args[1]);
-		
-		float m2 = Float.parseFloat(args[2]);
-		
-		float m3 =Float.parseFloat(args[3]);
-		
-		float total =m1+m2+m3;
-		
-		float avg = total/3;
-		
-		System.out.println("Name = " + name);
-		
-		System.out.println("Marks1 = "  + m1 );
-		
-		System.out.println("Marks2 = "  + m2);
-		
-		System.out.println("Marks3 = " + m3 );
-		
-		System.out.println("Total Marks = " + total);
-		
-		System.out.println("Average Marks = " +avg );
-		
-		
-		
-		
-		
-
-	
+		//Write your code here
+		for (int i=0;i<arr.length-1;i++){
+			if(arr[i]==6){
+				if(arr[i+1]==9 && arr[i+2]==12){
+					result =true;
+				}else{
+					return false;
+				}
+			}
+		}
+		return result;
 	}
 }

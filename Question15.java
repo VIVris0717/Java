@@ -1,20 +1,34 @@
-The PrintHello class demonstrates printing text to the console.
+Write a class InitializeArray with a public method initialize that takes two parameters len and ele are of type int returns an array of length len and set all the elements in the array to ele. Assumptions:
+ arr is never null
+Here is an example:
+Enter length of array:
+4
+Enter element in the array:
+3
+The output array is:
+3
+3
+3
+3
 
-You will notice that the line, System.out.println("Hello, I am learning Java!"); is responsible for printing the text.
+package q11063;
 
-This line is written inside the main method.
-Please note that in Java, String literals (i.e. text) must be enclosed in double quotes.
-In our case you will notice that the String literal Hello, I am learning Java! is enclosed in double quotes.
-
-Click on  to understand basics of printing.
-
-See the code and retype the same code.
-
-Note: Please don't change the package name.
-
-package q10761;
-public class PrintHello {
-	public static void main(String[] args) {
-		System.out.println("Hello, I am learning Java!");
+public class InitializeArray {
+	/**
+	 * Set all the elemets in the array to given element and set to length of array to given length
+	 * 
+	 * 
+	 * 
+	 * @return arry 
+	 */
+	 
+	public int[] initialize(int len, int ele) {
+		//Write  your code here
+		int a[]= new int [len];
+		for(int i=0;i<len;i++){
+			a[i]=ele;
+		}
+		return a;
+		
 	}
 }

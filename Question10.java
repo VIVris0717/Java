@@ -1,20 +1,26 @@
-A String is a sequence of zero or more characters enclosed in double-quotes. For example,
-String name = "Ganga";
-The value "Ganga" is called the string literal. We cannot open a double-quote on one line and close the double-quote in another line, they both should be in the same line.
+Write a class SwapFirstAndLast with a public method swap that takes one parameter arr of type int[]. Write a code to swap the first and last elements of the array and print all the elements of the array.
 
-We can embed escape characters (like \t, \n) also in a string literal. For example,
-String greetingText = "Hello Thames\nWelcome to London!";
-The above line when printed would have "Hello Thames" in one line and "Welcome to London!" in the next line.
-
-We will learn about the String class in detail later.
-
-Select all correct statements.
+For example:
+Cmd Args : 1 5 6 7 8
+8
+5
+6
+7
+1
 
 
-
-Answer 
-
-
-String text = "Hello" 
-				+ "World";
-is a valid statement.
+package q11058;
+public class SwapFirstAndLast{
+	public void swap(int[] a){
+		int f=a[0];
+		int l=a[a.length-1];
+		int temp=f;
+		f=l;
+		l=temp;
+		System.out.println(f);
+		for(int i=1;i<a.length-1;i++){
+			System.out.println(a[i]);
+		}
+		System.out.println(l);
+	}
+}

@@ -1,62 +1,36 @@
-Write a java program to display the default values of all primitive data types.
+Write a class SumOfElements with a public method sum that takes one parameter arr of type int[] and returns sum of all positive elements in the arr. The return type of sum should be int.
 
-Write a class PrimitiveTypes with main(String[ ] args) method.
+Assumptions:
+arr is never null
+arr may contain -ve numbers
+These are examples:
+Cmd Args : -35 -52 -12 -99
+Sum of all positive elements in the array is : 0
+Cmd Args : 36 12 -11 10
+Sum of all positive elements in the array is : 58
 
-Write code to produce the below output:
-byte default value = 0
-short default value = 0
-int default value = 0
-long default value = 0
-boolean default value = false
-double default value = 0.0
-float default value = 0.0
+package q11057;
 
-
-Note: Please don't change the package name.
-
-package q10815;
-class PrimitiveTypes
-
-{
+public class SumOfElements {
+	/**
+	 * Compute sum of all +ve elements in the array excluding -ve numbers
+	 * 
+	 * 
+	 * @return sum
+	 */ 
 	
-	static byte b;
+		public int sum(int[] arr) {
+			
+			//Write your code here
+			int sum=0;
+			for(int i=0;i<arr.length;i++){
+				if(arr[i]>=0){
+					
+				
+				sum+=arr[i];
+				}
+			}
+			return sum;
 	
-	static short s;
-	
-	static int i;
-	
-	static long l;
-	
-	static float f;
-	
-	static double d;
-	
-	static char c;
-	
-	static boolean bl;
-	
-	public static void main(String[] args)
-	
-	{
-		
-		
-		
-		System.out.println("byte default value = "+b);
-		
-		System.out.println("short default value = " +s);
-		
-		System.out.println("int default value = "+i);
-		
-		System.out.println("long default value = "+l);
-		
-		System.out.println("boolean default value = "+bl);
-		
-		System.out.println("double default value = "+d);
-		
-		System.out.println("float default value = "+f);
-		
 	}
-	
 }
-
-	

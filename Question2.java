@@ -1,22 +1,20 @@
-Understanding Unary Operators 
+Create a class MountainNamePrinter with a main method. Create an array with the following names: Nanda Devi, Kamet, K12, Dunagiri.
 
-package q10829;
-public class UnaryOperatorsDemo {
+Iterate over the array and print each name on a separate line.
+
+
+package q10937;
+
+public class MountainNamePrinter {
+	
 	public static void main(String[] args) {
-		int x = 16;
-		System.out.println("+x = " + (+x));
-		System.out.println("-x = " + (-x));
-		System.out.println("x = " + x);
-		System.out.println("++x = " + (++x));
-		System.out.println("x = " + x);
-		System.out.println("x++ = " + (x++));
-		System.out.println("x = " + x);
-		System.out.println("--x = " + (--x));
-		System.out.println("x = " + x);
-		System.out.println("x-- = " + (x--));
-		System.out.println("x = " + x);
-		boolean flag = false;
-		System.out.println("flag = " + flag);
-		System.out.println("!flag = " + (!flag));
+		
+		String[] namesArr = { "Nanda Devi", "Kamet", "K12", "Dunagiri"};
+		
+		for (String river : namesArr) {
+			
+			System.out.println(river);
+			
+		}
 	}
 }

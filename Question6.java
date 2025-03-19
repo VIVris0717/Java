@@ -1,30 +1,40 @@
-The below table shows the primitive types and their corresponding wrapper classes in Java:
-char    Character     Number Types
-==================================
-byte    Byte          Byte.valueOf(String s)
-short   Short         Short.valueOf(String s)
-int     Integer       Integer.valueOf(String s)
-float   Float         Float.valueOf(String s)
-double  Double        Double.valueOf(String s)
-long    Long          Long.valueOf(String s)All the above wrapper classes present for the number types contain a useful method called valueOf(), which converts a string to an instance of that number type.
+Create a class with name IndexFinder with public method printIndex that takes two parameters one is intArr of type int[] and second one is element of type int and returns only the first index match of the element in the intArr.
 
-See and retype the below code to understand the usage of the valueOf() method in the wrapper classes.
+Assumptions:
+arr is never null
+arr may contain duplicate elements but returns the index of the first match of the element
+Here is an example:
+Cmd Args : 69 25 89 54 89
+First match of the element 89 index is: 2
 
-Note: Please don't change the package name.'
 
-package q10825;
-public class WrapperClassDemo {
-	public static void main(String[] args) {
-		String text1 = "101";
-		String text2 = "34";
-		String text3 = "5.5";
-		String text4 = "-35.593933";
-		String text5 = "93593933";
-		System.out.println(Byte.valueOf(text1));
-		System.out.println(Short.valueOf(text2));
-		System.out.println(Integer.valueOf(text2));
-		System.out.println(Float.valueOf(text3));
-		System.out.println(Double.valueOf(text4));
-		System.out.println(Long.valueOf(text5));
+package q10941;
+
+public class IndexFinder {
+	/**
+	 * Find the first index match of the element in the array
+	 * 
+	 * 
+	 * @return index
+	 */ 
+	
+	public int printIndex(int[] intArr, int element) {
+		
+		//Write your code here
+		int ans=0;
+		
+		for (int i = 0; i < intArr.length; i++) {
+			
+			if (intArr[i] == element) {
+				
+			ans= i;
+				
+				break;
+				
+			}
+			
+			}
+		return ans;
+		
 	}
 }

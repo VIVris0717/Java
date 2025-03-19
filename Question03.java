@@ -1,15 +1,41 @@
-In Java, the boolean data type denotes a logical quantity with two possible values, indicated by the literals true or false.
 
-The primitive type boolean has a corresponding wrapper class called Boolean. Both booleanBoolean can be used interchangeably. Which means, we can say:
-Boolean isHot = true;
-boolean isSnowing = false;
-boolean isSummer = isHot && (!isSnowing);
-The fixed values true and false used above are called boolean literals.
-The default value of a primitive boolean is false, when not initialized. However, the default value of a reference of type Boolean is null, when not initialized.
-We will learn more about the wrapper class Boolean later.
+L21
+Arrays - Problem Solving - 1
+Q. No : 11048
+Problem solving with Array 
+Write a class ElementCheck with a public method checkFirstOrLast that takes two parameters one is arr of type int[] and second one is arg of type int and returns true if the arg is first or last element in the arr else returns false. The return type of checkFirstOrLast is boolean.
 
-Select all the correct statements given below.
+Assumption:
+arr is never null
+Here is an example:
+Enter no of elements in the array: 4
+Enter elements in the array seperated by space:1 2 3 6
+Enter the search element:6
+true
 
-Answer 
+package q11048;
 
-boolean isResponse = false; is a valid statement.
+public class ElementCheck {
+
+/** write a logic to check whether the given element is present in the first or last in the array 
+ * 
+ * 
+ * 
+ *@return true if the element present if not return false
+ * 
+ */
+ 	public boolean checkFirstOrLast(int[] arr, int arg) {
+		//Write your code
+	
+			if(arr[0]==arg){
+			return true;	
+			}else{
+				if(arr[arr.length-1]==arg){
+					return true;
+				}else{
+					return false;
+				}
+			}
+		
+	}
+}

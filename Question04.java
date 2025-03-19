@@ -1,25 +1,25 @@
-The Boolean class wraps a primitive boolean value.
-This class provides constants and methods that are useful while working with booleans. For example it has a method Boolean.parseBoolean(String s) which can be used to convert a string value representing one of the two logical states of being true or false into their corresponding boolean value
-boolean x = Boolean.parseBoolean("true");
-boolean y = Boolean.parseBoolean("false");
-In the below code, the main method of GuessHoliday will be passed an argument. The argument can be either "true" or "false".
-You can assume that the string value passed in args[0] will always contain a boolean value of either true or false.
-Complete the below code so that it produces the correct output.
+write a class ElementCount with a main method which passes an arr of type int[] and an element of type int. Print number of times the element is present in the arr.
+
+Here is an example:
+int[] arr = {1, 12, 9, 3, 5, 3, 78, 4, 3, 9, 18, 56, 1, 5}
+Cmd Args : 1
+2
 
 
-Note: Please don't change the package name.
+Note: Please don't change the package name.'
 
-Answer 
-
-package q10810;
-public class GuessHoliday {
+package q11049;
+public class ElementCount {
 	public static void main(String[] args) {
-		//write code to convert the value pased in args[0] into a boolean
-		boolean isHoliday =Boolean.parseBoolean(args[0]) ;
-		if (isHoliday) {
-			System.out.println("I am sleeping!");
-		} else {
-			System.out.println("I am working hard!");
+		int[] arr = {1, 12, 9, 3, 5, 3, 78, 4, 3, 9, 18, 56, 1, 5};
+		int element = Integer.parseInt(args[0]);
+		int cnt=0;
+		for(int i=0;i<arr.length;i++){
+			if(element==arr[i]){
+				cnt++;
+			}
 		}
+	System.out.println(cnt);
+		
 	}
 }

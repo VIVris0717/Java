@@ -1,28 +1,67 @@
-In Java, backslash character (\) is used to mark an escape sequence. An Escape Sequence is an escape character \ followed by a character, like \n or \t. The presence of the escape character changes the meaning of the character which follows it. For example when we print the String literal "Hello\tWorld" we would see the result as
-Hello	World
-In the String literal "Hello\tWorld", \t represents the TAB character.
+Write a class SequenceCheck with a public method sequenceCheck that takes one parameter arr of type int[] and returns true if the elements 1,2,3 are present in the arr.The returen type of sequenceCheck should be boolean.
 
-Similarly if we want to print a double quote inside a double quoted String literal, we need to escape the double quote by the escape character \. For example :
-String escapedDoubleQuote = "Hello \" (Quote)";
-System.out.println(escapedDoubleQuote);
-Would produce the below output'
-Hello " (Quote)''
-Similarly if we want to print a single quote inside a char literal, we need to escape the single quote by the escape character. For example :
-char singleQuoteChar = '\'';
-See the below code and retype the same. Note the effects of \t and \n in the resulting output when executed successfully.
+Assumptions:
+arr is never null
+The elements need not be in consecutive order
+Here are examples:
+Cmd Args : 1 6 3 2
+true
+Cmd Args : 3 6 4 7 8
+false
 
-//Note: Please don't change the package name.'
+package q11060;
 
+public class SequenceCheck {
+	/**
+	 * check if the given array contains the elements 1,2,3 
+	 * 
+	 * 
+	 * 
+	 * @return true if contain else return false
+	 */
+	public static boolean isSorted(int[] a)
+	
+	{
+		
+	
+	
+		
+		boolean aa=false,bb=false,cc=false;
+		
+		for (int i = 0; i < a.length ; i++)
+		
+		{
+	//	bool a=false,b=false,c=false;	
+			if (a[i] == 1 ) {
+				
+				aa=true;
+				
+			}else if(a[i]==2){
+				bb=true;
+			}else if(a[i]==3){
+				cc=true;
+			}
+			
+		}
+		
+		if(aa && bb && cc){
+			return true;
+		}else
+		
+		return false;
+		
+	}
+	
+			
 
-
-
-
-
-package q10818;
-public class EscapeSequenceDemo {
-	public static void main(String[] args) {
-		System.out.print("One\tTwo");
-		System.out.print(" ");
-		System.out.print("Three\nFour");
+	
+	
+	
+	public boolean sequenceCheck(int[] arr) {
+		
+		//Write your code here
+		boolean ans=isSorted(arr);
+		return ans;
+		
 	}
 }

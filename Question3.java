@@ -1,24 +1,16 @@
-In Java, = is the assignment operator. It is the most common and important operator in any programming language.
-It is used to assign a value to a variable. Its usage is
-LHS = RHS;
-LHS (left-hand side to the = operator) can be a field (variable), expression or an array access. RHS (right-hand side) can be a value, variable or an expression.
-For example
-int x = 10;  				// variable x is assigned value 10
-String[] namesArr = new String[10];	// an empty String array of size 10 is assigned to reference namesArr 
-namesArr[0] = "Ganga";			// namesArr's 0th index is assigned a value "Ganga"
-car.speed = getCurrentSpeed();		// the field speed in car reference is assigned a value returned by the method getCurrentSpeed()
+Retype the code below. The class RiverNameFinder has a method findElement(int index). It accepts an integer argument index. The method prints the array element at that index.
 
-Assignment operator verifies the compatibility of types of LHS and RHS.
-Automatic type widening is performed when possible, else a compilation error is reported.
+The findElement method creates an array namesArr containing river names. It accesses the element of namesArr at index and prints the element.
 
-According to Java coding conventions, a single space should be provided to the left and right of the assignment operator.
+Observe that before accessing the element, the method checks if the index is valid or not by checking if index is greater than zero and less than the size of namesArr. Otherwise, we get an ArrayIndexOutofBoundsException.
 
-Select all valid assignment statements.
+package q10938;
+public class RiverNameFinder {
+	public void findElement(int index) {
+		String[] namesArr = { "Ganga", "Yamuna", "Godavari", "Krishna", "Narmada", "Kaveri" };
+		if (index >= 0 && index < namesArr.length) {
+			System.out.println(namesArr[index]);
+		}
+	}
+}
 
-
-
-Answer 
-
-String text = null;
-int myHeight = Integer.MAX_VALUE;
-int x = 3, y = 5, z = 5;
